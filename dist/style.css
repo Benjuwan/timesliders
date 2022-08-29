@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+}
+body .GlobalWrapper .wrapper ul {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body .GlobalWrapper .wrapper ul #btnWrap {
+  display: flex;
+  justify-content: space-around;
+  width: clamp(160px, 100%, 320px);
+  margin: auto;
+}
+body .GlobalWrapper .wrapper ul #btnWrap .btns {
+  appearance: none;
+  border: 0;
+  width: 12px;
+  height: 12px;
+  background-color: #333;
+  border-radius: 50%;
+  cursor: pointer;
+}
+body .GlobalWrapper .wrapper ul #btnWrap .btns:hover {
+  opacity: 0.5;
+}
