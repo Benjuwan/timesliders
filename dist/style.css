@@ -25,3 +25,8 @@ body .GlobalWrapper .wrapper ul #btnWrap .btns {
 body .GlobalWrapper .wrapper ul #btnWrap .btns:hover {
   opacity: 0.5;
 }
+
+img{
+  width: 100%;
+  height: auto;
+}
