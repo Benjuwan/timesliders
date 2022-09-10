@@ -13,6 +13,10 @@ document.addEventListener("DOMContentLoaded",()=>{
     // パスの指定（実装サイトに合わせて随時変更）
     return `${locationUrl}/src/images/${img}.jpg`;
   });
+  // 画像の加工処理：placeholderを使用するパターン
+  const imgPlaceholders = imgAltTxt.map(imgItem => {
+    return `https://via.placeholder.com/640x360/333/fff?text=${imgItem}`;
+  });
 
   // スライダー用画像に関する定数（三項演算子による条件分岐で任意の画像が無ければ placeholder を使用）
   const imgItems = specificImges.length > 0? setImages : imgPlaceholders;
