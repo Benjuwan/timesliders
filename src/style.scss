@@ -3,7 +3,8 @@ body{
   
   & .GlobalWrapper{
     & .wrapper{
-      display: none;
+      display: none; // デフォルトのスライダーを使う場合は表示
+
       & ul{
         text-align: center;
         margin: 0;
@@ -35,10 +36,12 @@ body{
   }
 
   & .imgSliders{
+    // display: none; // エフェクト付き・任意の画像を使ったスライダーを使用する場合は表示
     margin: 0;
     padding: 0;
     height: calc(100vh/2);
     overflow: hidden;
+
 
     & ul{
       display: flex;
