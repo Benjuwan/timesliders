@@ -6,16 +6,17 @@ document.addEventListener("DOMContentLoaded",()=>{
   // 各スライドへ付与するalt（及びplaceholderにセットするテキスト）
   const imgAltTxt = ['Lorem','ipsum','dolor','sit','amet'];
   
+  // 画像の加工処理：placeholderを使用するパターン
+  const imgPlaceholders = imgAltTxt.map(imgItem => {
+    return `https://via.placeholder.com/640x360/333/fff?text=${imgItem}`;
+  });
+
   // 画像の加工処理：フォルダに任意の画像を用意するパターン
   const locationUrl = location.origin;
   const specificImges = ['image-1', 'image-2', 'image-3', 'image-p1', 'image-p2', 'image-p3', 'image-p4', 'image-travel', 'villa-1', 'villa-2', 'villa-3', 'villa-4', 'villa-5', 'villa-6'];
   const setImages = specificImges.map(img => {
     // パスの指定（実装サイトに合わせて随時変更）
     return `${locationUrl}/src/images/${img}.jpg`;
-  });
-  // 画像の加工処理：placeholderを使用するパターン
-  const imgPlaceholders = imgAltTxt.map(imgItem => {
-    return `https://via.placeholder.com/640x360/333/fff?text=${imgItem}`;
   });
 
   // スライダー用画像に関する定数（三項演算子による条件分岐で任意の画像が無ければ placeholder を使用）

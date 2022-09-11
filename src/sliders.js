@@ -1,7 +1,13 @@
 document.addEventListener("DOMContentLoaded", ()=> {
     const ParentSlider = document.querySelector('.imgSliders');
     const sliders = ParentSlider.querySelectorAll('ul li');
-    let count = 0;
+    sliders.forEach((slider, i) => {
+        if(i === 0){ // 初回表示・読み込み時で表示までにタイムラグを生じさせないよう最初の要素には付与しておく 
+            slider.classList.add('inView');
+        }
+    });
+
+    let count = 1; // 初回表示・読み込み時の処理があるので最初(index番号0)は飛ばして1スタート 
     setInterval(()=>{
         if(count < sliders.length){
             sliders.forEach((slider, i) => {
@@ -15,5 +21,5 @@ document.addEventListener("DOMContentLoaded", ()=> {
         } else {
             count = 0;
         }
-    }, 1000);
+    }, 3000);
 });
